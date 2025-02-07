@@ -1,0 +1,102 @@
+
+.main-div{
+    margin-top: 50px;
+}
+  
+  .form-container {
+    max-width: 28rem; /* 384px */
+    margin: 0 auto;
+    padding: 1.5rem;
+    border: 0.5px solid rgb(62, 62, 62);
+    background-color: #27272A;
+    border-radius: 0.5rem;
+    box-shadow: 0 7px 6px rgba(106, 106, 106, 0.1);
+  }
+  .cross{
+    margin-left: 390px ;
+  }
+  
+  /* Form Group */
+  .form-group {
+    margin-bottom: 1.25rem; /* 20px */
+  }
+  .form-group ::placeholder{
+    color: #cdcdcd;
+  }
+  
+  .form-label {
+    display: block;
+    
+    margin-bottom: 1.2rem;
+    font-size: 0.875rem; /* 14px */
+    font-weight: 500;
+    color: #fff;
+  }
+  
+  .form-input {
+    width: 90%;
+    padding: 0.625rem; /* 10px */
+    font-size: 0.875rem;
+    border: 1px solid #d1d5db;
+    border-radius: 0.375rem; /* 6px */
+    background-color: #f9fafb;
+    color: #1f2937;
+  }
+  
+  .form-input:focus {
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.3);
+    outline: none;
+  }
+  
+  /* Checkbox Group */
+  .form-checkbox-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.25rem;
+  }
+  
+  .form-checkbox {
+    width: 1rem; /* 16px */
+    height: 1rem; /* 16px */
+    border: 1px solid #d1d5db;
+    border-radius: 0.25rem; /* 4px */
+    background-color: #f9fafb;
+  }
+  
+  .form-checkbox:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.3);
+  }
+  
+  .checkbox-label {
+    margin-left: 0.5rem;
+    font-size: 0.875rem;
+    color: #fff;
+  }
+  
+  /* Button */
+  .form-button {
+    display: block;
+    width: 90%;
+    padding: 0.625rem 1.25rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: #fff;
+    background-color: #3b82f6;
+    border: none;
+    border-radius: 0.375rem; /* 6px */
+    cursor: pointer;
+    text-align: center;
+  }
+  
+  .form-button:hover {
+    background-color: #2563eb;
+  }
+  
+  .form-button:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.3);
+  }
+  
+  
