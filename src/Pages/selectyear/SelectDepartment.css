@@ -1,150 +1,84 @@
-/* Main Container */
-.mom {
-  background-color: #27272A;
-  position: relative;
-  width: 100vw;
-  height: 75vh;
-  overflow: hidden;
-  padding: 0;
-  margin: 0;
-}
-
-/* Fullscreen Section */
-.select-year-fullscreen {
+.select-year-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 75vh;
-  flex-wrap: wrap;
-  width: 100%;
+  min-height: 100vh; /* Use min-height instead of height for better responsiveness */
   text-align: center;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
+  background-color: #f9f9f9;
+  padding: 20px; /* Add padding to prevent content from touching edges */
 }
 
-/* Department Container */
-.contain {
+h1 {
+  background-color: #0056b3;
+  color: #ffffff;
+  padding: 15px 30px;
+  font-size: 2rem;
+  text-align: center;
+  border-radius: 10px;
+  margin-bottom: 40px;
+  display: inline-block;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.container {
   display: flex;
-  flex-direction: row;
+  flex-wrap: wrap; /* Allow boxes to wrap to the next line on smaller screens */
+  gap: 20px;
   justify-content: center;
   align-items: center;
-  gap: 30px;
-  flex-wrap: wrap;
-  height: 80vh;
-  width: 100%;
-  padding-bottom: 20px;
-  padding-left: 20px;
-  padding-right: 20px;
-  border-radius: 10px;
+  max-width: 100%; /* Ensure the container doesn't overflow */
 }
 
-.contain a {
-  text-decoration: none;
-}
-
-/* Department Box */
 .box {
-  display: flex;
-  flex-direction: column;
   padding: 20px 40px;
-  border: 1px solid white;
-  border-radius: 10px;
-  height: 200px;
-  width: 250px;
-  background-color: #27272A;
-  color: #fff;
-  align-items: center;
-  justify-content: center;
+  border: none;
+  border-radius: 5px;
+  background-color: #f0f0f0;
+  color: #333;
   font-size: 18px;
   cursor: pointer;
   transition: background-color 0.3s, transform 0.3s;
-  margin-top: 20px;
-  gap: 15px;
-  font-size: 20px;
-  font-weight: 600;
-}
-
-.box svg {
-  width: 50px;
-  height: 50px;
+  flex: 1 1 200px; /* Allow boxes to grow and shrink, with a base width of 200px */
+  text-align: center; /* Ensure text is centered */
 }
 
 .box:hover {
-  background-color: #007BFF;
+  background-color: purple;
   color: white;
   transform: scale(1.05);
 }
 
-/* Media Queries for Responsiveness */
-
-/* Tablet View */
-@media (max-width: 1024px) {
-  .mom {
-    height: auto;
-    min-height: 75vh;
-  }
-
-  .select-year-fullscreen {
-    height: auto;
-    min-height: 75vh;
-  }
-
-  .contain {
-    height: auto;
-    gap: 20px;
-    padding: 20px;
-  }
-
-  .box {
-    width: 200px;
-    height: 180px;
-    font-size: 18px;
-  }
-
-  .box svg {
-    width: 40px;
-    height: 40px;
-  }
-}
-
-/* Mobile View */
+/* Responsive adjustments */
 @media (max-width: 768px) {
-  .contain {
-    gap: 15px;
-    padding: 15px;
+  h1 {
+      font-size: 1.5rem; /* Reduce font size for tablets */
+      padding: 10px 20px; /* Reduce padding for tablets */
+      margin-bottom: 30px; /* Reduce margin for tablets */
   }
 
   .box {
-    width: 150px;
-    height: 150px;
-    font-size: 16px;
-    padding: 15px 30px;
-  }
-
-  .box svg {
-    width: 35px;
-    height: 35px;
+      padding: 15px 30px; /* Reduce padding for tablets */
+      font-size: 16px; /* Reduce font size for tablets */
+      flex: 1 1 150px; /* Adjust base width for tablets */
   }
 }
 
-/* Small Mobile View */
 @media (max-width: 480px) {
-  .contain {
-    gap: 10px;
-    padding: 10px;
+  h1 {
+      font-size: 1.2rem; /* Further reduce font size for mobile */
+      padding: 8px 16px; /* Further reduce padding for mobile */
+      margin-bottom: 20px; /* Further reduce margin for mobile */
+  }
+
+  .container {
+      gap: 10px; /* Reduce gap between boxes for mobile */
   }
 
   .box {
-    width: 120px;
-    height: 120px;
-    font-size: 14px;
-    padding: 10px 20px;
-  }
-
-  .box svg {
-    width: 30px;
-    height: 30px;
+      padding: 10px 20px; /* Further reduce padding for mobile */
+      font-size: 14px; /* Further reduce font size for mobile */
+      flex: 1 1 100px; /* Adjust base width for mobile */
   }
 }
+  
