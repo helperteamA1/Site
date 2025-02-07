@@ -1,5 +1,5 @@
-
-.mom{
+/* Main Container */
+.mom {
   background-color: #27272A;
   position: relative;
   width: 100vw;
@@ -9,6 +9,7 @@
   margin: 0;
 }
 
+/* Fullscreen Section */
 .select-year-fullscreen {
   display: flex;
   flex-direction: column;
@@ -16,38 +17,37 @@
   justify-content: center;
   height: 75vh;
   flex-wrap: wrap;
-  width: 100%; 
-  text-align: center; 
-  margin: 0; 
+  width: 100%;
+  text-align: center;
+  margin: 0;
   padding: 0;
   overflow: hidden;
 }
 
-
+/* Department Container */
 .contain {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  gap: 30px; 
+  gap: 30px;
   flex-wrap: wrap;
-   height: 80vh;
-   width: 100%;
+  height: 80vh;
+  width: 100%;
   padding-bottom: 20px;
   padding-left: 20px;
   padding-right: 20px;
   border-radius: 10px;
-  
 }
 
-.contain a{
+.contain a {
   text-decoration: none;
 }
-.box {
 
+/* Department Box */
+.box {
   display: flex;
   flex-direction: column;
-
   padding: 20px 40px;
   border: 1px solid white;
   border-radius: 10px;
@@ -65,12 +65,86 @@
   font-size: 20px;
   font-weight: 600;
 }
-.box svg{
+
+.box svg {
   width: 50px;
   height: 50px;
 }
+
 .box:hover {
   background-color: #007BFF;
   color: white;
   transform: scale(1.05);
+}
+
+/* Media Queries for Responsiveness */
+
+/* Tablet View */
+@media (max-width: 1024px) {
+  .mom {
+    height: auto;
+    min-height: 75vh;
+  }
+
+  .select-year-fullscreen {
+    height: auto;
+    min-height: 75vh;
+  }
+
+  .contain {
+    height: auto;
+    gap: 20px;
+    padding: 20px;
+  }
+
+  .box {
+    width: 200px;
+    height: 180px;
+    font-size: 18px;
+  }
+
+  .box svg {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+/* Mobile View */
+@media (max-width: 768px) {
+  .contain {
+    gap: 15px;
+    padding: 15px;
+  }
+
+  .box {
+    width: 150px;
+    height: 150px;
+    font-size: 16px;
+    padding: 15px 30px;
+  }
+
+  .box svg {
+    width: 35px;
+    height: 35px;
+  }
+}
+
+/* Small Mobile View */
+@media (max-width: 480px) {
+  .contain {
+    gap: 10px;
+    padding: 10px;
+  }
+
+  .box {
+    width: 120px;
+    height: 120px;
+    font-size: 14px;
+    padding: 10px 20px;
+  }
+
+  .box svg {
+    width: 30px;
+    height: 30px;
+  }
 }
