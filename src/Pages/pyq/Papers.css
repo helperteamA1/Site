@@ -1,23 +1,21 @@
-
-.paper-container{
+.paper-container {
     display: flex;
+    flex-wrap: wrap; /* Allow items to wrap to the next line on smaller screens */
     align-items: center;
     justify-content: center;
-
+    gap: 20px; /* Add gap between items for better spacing */
+    padding: 20px; /* Add padding to the container */
 }
-.paper-container a{
+
+.paper-container a {
     text-decoration: none;
 }
-.paperbox{
-    border: 1px solid white;
 
-    
-    width:280px ;
+.paperbox {
+    border: 1px solid white;
+    width: 280px;
     height: 200px;
     border-radius: 12px;
-    margin-left: 30px;
-    margin-top: 0px;
-    margin-bottom: 50px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -26,9 +24,43 @@
     font-weight: 700;
     color: #f8f7ff;
     cursor: pointer;
-    
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Add hover effect */
 }
-.paperbox img{
+
+.paperbox:hover {
+    transform: scale(1.05); /* Slightly scale up on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow on hover */
+}
+
+.paperbox img {
     height: 150px;
     width: 150px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .paperbox {
+        width: 45%; /* Make boxes take up less width on tablets */
+        height: auto; /* Allow height to adjust based on content */
+        margin: 10px; /* Reduce margin for smaller screens */
+        font-size: large; /* Adjust font size for smaller screens */
+    }
+
+    .paperbox img {
+        height: 100px;
+        width: 100px; /* Reduce image size for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .paperbox {
+        width: 90%; /* Make boxes take up most of the width on mobile */
+        margin: 10px 0; /* Adjust margin for mobile */
+        font-size: medium; /* Further reduce font size for mobile */
+    }
+
+    .paperbox img {
+        height: 80px;
+        width: 80px; /* Further reduce image size for mobile */
+    }
 }
